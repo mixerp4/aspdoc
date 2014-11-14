@@ -1,0 +1,102 @@
+﻿<div class="ui large modal" id="MediaManager">
+    <i class="close icon"></i>
+    <div class="ui teal header">
+        <i class="photo basic teal icon"></i>
+        Media Manager
+    </div>
+    <div class="content">
+        <div class="ui icon buttons">
+            <a class="ui button" onclick="$('#FileUpload').toggle(500);">
+                <i class="cloud upload blue icon"></i>
+                Upload Media
+            </a>
+            <a class="ui button" onclick="$('#DirectoryInfo').toggle(500);">
+                <i class="folder teal icon"></i>
+                Create a New Directory
+            </a>
+            <a class="ui button" onclick="InsertMedia();">
+                <i class="circle down green icon"></i>
+                Insert
+            </a>
+            <a class="ui button" onclick="ViewMedia();">
+                <i class="arrow sign right blue icon"></i>
+                View
+            </a>
+            <a class="ui button" onclick="DeleteMedia();">
+                <i class="minus sign red icon"></i>
+                Delete
+            </a>
+        </div>
+
+        <div class="ui segment initially hidden" id="DirectoryInfo">
+            <div class="ui header">
+                <i class="folder icon"></i>
+                Create a New Directory
+            </div>
+            <div class="content">
+                <div class="ui form">
+                    <div class="fields">
+                        <div class="inline field">
+                            <label for="DirectoryName">Directory Name</label>
+                            <input type="text" id="DirectoryName" />
+                        </div>
+                        <span>&nbsp;</span>
+                        <a class="ui small green button" onclick="CreateDirectory();">
+                            Create
+                        </a>
+                        <a class="ui small orange button" onclick="$('#DirectoryInfo').toggle(500);">
+                            Cancel
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui segment initially hidden" id="FileUpload">
+            <div class="ui header">
+                <i class="folder icon"></i>
+                Upload Media
+            </div>
+            <div class="content">
+                <div class="ui form">
+                    <div class="connected fields">
+                        <div class="initially hidden inline field">
+                            <input type="file" id="File" class="ui small button" />
+                        </div>
+                        <span>&nbsp;</span>
+                        <a class="ui blue small button" id="BrowseButton">
+                            Browse
+                        </a>
+                        <a class="ui green small button" id="UploadButton">
+                            Upload
+                        </a>
+                        <a class="ui orange small button" onclick="$('#FileUpload').toggle(500);">
+                            Done
+                        </a>
+                        <div class="inline field" style="width:395px;overflow: hidden;">
+                            <div class="ui green progress" id="Progress">
+                                <div class="bar">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ui primary segment">
+            <div class="ui breadcrumb" id="MediaManagerBreadCrumb">
+                Current Directory :
+            </div>
+        </div>
+
+        <div style="height:600px;overflow: auto;">
+            <div class="ui form" id="MediaManagerFiles">
+            </div>
+        </div>
+    </div>
+    <div class="actions">
+        <div class="ui small red button">
+            Cancel
+        </div>
+    </div>
+</div>

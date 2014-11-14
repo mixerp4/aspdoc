@@ -1,0 +1,41 @@
+﻿@using ASPDoc.Net.Configuration.Models
+@using ASPDoc.Net.Membership.Models
+<div class="ui-layout-north">
+    <div class="ui fixed top inverted teal menu">
+        <a class="item" href="javascript:void(0)" onclick=" GoHome(); ">
+            @ASPDoc.Net.Configuration.AppConfiguration.GetSiteName()
+        </a>
+
+        @{ Html.RenderPartial("_SignIn", new SignInModel()); }
+        @if (ViewBag.IsAuthenticated)
+        {
+            if (string.IsNullOrWhiteSpace(Request.QueryString["version"]))
+            {
+                <a class="item" onclick=" $('#SaveButton').trigger('click'); ">
+                    <i class="save icon"></i>Save Document
+                </a>
+
+                <a class="item" onclick="return (GetConfirmation()); alert('foo');">
+                    <i class="delete icon"></i>Delete Document
+                </a>
+            }
+
+            <div class="ui right inverted teal  menu">
+                <a class="item" onclick=" editorToggle(); ">
+                    <i class="edit icon"></i>Toggle Editor
+                </a>
+                <a class="item" onclick=" $('#Settings').modal('show'); ">
+                    <i class="setting icon"></i>
+                    Configuration
+                </a>
+                <a class="item" onclick=" $('#MediaManager').modal('show'); InitializeMedia();">
+                    <i class="photo basic icon"></i>
+                    Media Manager
+                </a>
+            </div>
+
+            Html.RenderPartial("_Configuration", new ConfigurationModel());
+            Html.RenderPartial("_MediaManager");
+        }
+    </div>
+</div>

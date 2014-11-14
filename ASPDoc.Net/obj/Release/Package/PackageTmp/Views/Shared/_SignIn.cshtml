@@ -1,0 +1,60 @@
+﻿@model ASPDoc.Net.Membership.Models.SignInModel
+
+@if (ViewBag.IsAuthenticated)
+{
+    <a class="item" onclick=" SignOut() ">
+        <i class="user icon"></i>Sign Out
+    </a>
+}
+else
+{
+    <a class="item" onclick=" $('.modal').modal('show'); ">
+        <i class="user icon"></i>Sign In
+    </a>
+
+    <div class="ui small modal" id="SignInView">
+        <i class="close icon"></i>
+        <div class="header">
+            Sign In
+        </div>
+        <div class="content">
+            <form>
+                <div class="ui form green segment">
+                    <div class="field">
+                        @* ReSharper disable once Html.IdNotResolved *@
+                        <label for="Username">Username</label>
+                        <div class="ui left labeled icon input">
+                            @Html.TextBoxFor(x => x.Username)
+                            <i class="user icon"></i>
+                        </div>
+                    </div>
+                    <div class="field">
+                        @* ReSharper disable once Html.IdNotResolved *@
+                        <label for="Password">Password</label>
+                        <div class="ui left labeled icon input">
+                            @Html.PasswordFor(x => x.Password)
+                            <i class="lock icon"></i>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui toggle checkbox">
+                            @Html.CheckBoxFor(x => x.RememberMe)
+                            @* ReSharper disable once Html.IdNotResolved *@
+                            <label for="RememberMe">Remember Me Next Time</label>
+                        </div>
+                    </div>
+                    <div class="ui red small hidden message" id="Message"></div>
+                    <button class="ui positive right labeled icon small button" onclick=" return SignIn(this); ">
+                        Sign In
+                        <i class="checkmark icon"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="actions">
+            <div class="ui small red button">
+                Cancel
+            </div>
+        </div>
+    </div>
+}

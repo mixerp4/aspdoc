@@ -1,0 +1,11 @@
+#Flat Files
+
+ASPDoc.net uses flat files to store documents. When you save a document, there are two files saved:
+
+* Raw Markdown File
+* Markedup File (HTML)
+ 
+The raw markdown file exactly resembles to your URL, whereas the markedup file appends **".md.html"** to the raw file as the filename.
+
+##Related Topics
+* [Back to Documentation Home](../index)

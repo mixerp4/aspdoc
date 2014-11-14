@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<bundle xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://vswebessentials.com/schemas/v1/bundle.xsd">
+  <settings>
+    <!--Determines if the bundle file should be automatically optimized after creation/update.-->
+    <minify>true</minify>
+    <!--Determin whether to generate/re-generate this bundle on building the solution.-->
+    <runOnBuild>false</runOnBuild>
+    <!--Specifies a custom subfolder to save files to. By default, compiled output will be placed in the same folder and nested under the original file.-->
+    <outputDirectory />
+  </settings>
+  <!--The order of the <file> elements determines the order of the files in the bundle.-->
+  <files>
+    <file>/Scripts/jquery/jquery-1.9.1.js</file>
+    <file>/Scripts/jquery/jquery-ui.min.js</file>
+    <file>/Scripts/marked/lib/marked.js</file>
+    <file>/Scripts/semantic/javascript/semantic.min.js</file>
+    <file>/Scripts/ace-editor/ace.js</file>
+    <file>/Scripts/jquery/jquery.layout-latest.js</file>
+    <file>/Scripts/aspdoc/declaration.js</file>
+    <file>/Scripts/aspdoc/utilities.js</file>
+    <file>/Scripts/aspdoc/layout.js</file>
+    <file>/Scripts/aspdoc/editor.js</file>
+    <file>/Scripts/aspdoc/ajax.js</file>
+    <file>/Scripts/aspdoc/index.js</file>
+    <file>/Scripts/aspdoc/sign-in.js</file>
+    <file>/Scripts/aspdoc/sign-out.js</file>
+    <file>/Scripts/aspdoc/disqus.js</file>
+    <file>/Scripts/prism/prism.js</file>
+    <file>/Scripts/ajax-file-upload.js</file>
+    <file>/Scripts/aspdoc/media-manager/declaration.js</file>
+    <file>/Scripts/aspdoc/media-manager/breadcrumb.js</file>
+    <file>/Scripts/aspdoc/media-manager/create-directory.js</file>
+    <file>/Scripts/aspdoc/media-manager/delete-media.js</file>
+    <file>/Scripts/aspdoc/media-manager/display-media.js</file>
+    <file>/Scripts/aspdoc/media-manager/insert-media.js</file>
+    <file>/Scripts/aspdoc/media-manager/upload-media.js</file>
+    <file>/Scripts/aspdoc/media-manager/utilities.js</file>
+    <file>/Scripts/aspdoc/media-manager/view-media.js</file>
+  </files>
+</bundle>

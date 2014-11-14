@@ -1,0 +1,20 @@
+#Arbitary URLs in ASPDoc.net
+
+While creating a page in ASPDoc.net, you can provide a link to the URL that does not exists. Upon visiting the URL that does not exist,
+you can create the page there.
+
+Let's say you are creating a page called "Foo's Documentation", like shown in this image:
+
+![../Site/Media/Documentation/foos-documentation.png](../Site/Media/Documentation/foos-documentation.png)
+
+In this page, we have a markdown link which points to a url "about-bar" which does not exist yet. When you click the link on the right side,
+the browser will nagivate to that page, which looks like this:
+
+![../Site/Media/Documentation/about-bar.png](../Site/Media/Documentation/about-bar.png)
+
+You can now create this page by writing some contents and clicking "Save Document".
+
+
+##Related Topics
+* [Deleting a Page](deleting-a-page)
+* [Back to Documentation Home](../index)

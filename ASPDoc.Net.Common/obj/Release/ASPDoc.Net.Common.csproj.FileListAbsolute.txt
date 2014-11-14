@@ -1,0 +1,5 @@
+C:\Users\nirvan\Desktop\mixerp\ASPDoc\ASPDoc.Net.Common\bin\Release\ASPDoc.Net.Common.dll
+C:\Users\nirvan\Desktop\mixerp\ASPDoc\ASPDoc.Net.Common\bin\Release\ASPDoc.Net.Common.pdb
+C:\Users\nirvan\Desktop\mixerp\ASPDoc\ASPDoc.Net.Common\obj\Release\ASPDoc.Net.Common.dll
+C:\Users\nirvan\Desktop\mixerp\ASPDoc\ASPDoc.Net.Common\obj\Release\ASPDoc.Net.Common.pdb
+C:\Users\nirvan\Desktop\mixerp\ASPDoc\ASPDoc.Net.Common\obj\Release\ASPDoc.Net.Common.csprojResolveAssemblyReference.cache

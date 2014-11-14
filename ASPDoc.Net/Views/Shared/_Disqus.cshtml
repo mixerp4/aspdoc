@@ -1,0 +1,10 @@
+﻿@if (!string.IsNullOrWhiteSpace(ViewBag.DisqusName))
+{
+    <button class="ui button red" onclick=" LoadDisqus(); ">Load Discussion</button>
+    <script type="text/javascript">
+        function LoadDisqus() {
+            LoadDisqussion("@ViewBag.DisqusName");
+        };
+    </script>
+    <div id="disqus_thread"></div>
+}

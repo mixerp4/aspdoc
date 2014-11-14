@@ -1,0 +1,11 @@
+C:\Users\nirvan\Desktop\mixerp\ASPDoc\ASPDoc.Net.Configuration\bin\Release\ASPDoc.Net.Configuration.dll
+C:\Users\nirvan\Desktop\mixerp\ASPDoc\ASPDoc.Net.Configuration\bin\Release\ASPDoc.Net.Configuration.pdb
+C:\Users\nirvan\Desktop\mixerp\ASPDoc\ASPDoc.Net.Configuration\obj\Release\ASPDoc.Net.Configuration.dll
+C:\Users\nirvan\Desktop\mixerp\ASPDoc\ASPDoc.Net.Configuration\obj\Release\ASPDoc.Net.Configuration.pdb
+C:\Users\nirvan\Desktop\mixerp\ASPDoc\ASPDoc.Net.Configuration\bin\Release\MixERP.Net.Common.dll
+C:\Users\nirvan\Desktop\mixerp\ASPDoc.net Codeplex\aspdoc\ASPDoc.Net.Configuration\bin\Release\ASPDoc.Net.Configuration.dll
+C:\Users\nirvan\Desktop\mixerp\ASPDoc.net Codeplex\aspdoc\ASPDoc.Net.Configuration\bin\Release\ASPDoc.Net.Configuration.pdb
+C:\Users\nirvan\Desktop\mixerp\ASPDoc.net Codeplex\aspdoc\ASPDoc.Net.Configuration\bin\Release\MixERP.Net.Common.dll
+C:\Users\nirvan\Desktop\mixerp\ASPDoc.net Codeplex\aspdoc\ASPDoc.Net.Configuration\obj\Release\ASPDoc.Net.Configuration.dll
+C:\Users\nirvan\Desktop\mixerp\ASPDoc.net Codeplex\aspdoc\ASPDoc.Net.Configuration\obj\Release\ASPDoc.Net.Configuration.pdb
+C:\Users\nirvan\Desktop\mixerp\aspdoc\ASPDoc.Net.Configuration\obj\Release\ASPDoc.Net.Configuration.csprojResolveAssemblyReference.cache

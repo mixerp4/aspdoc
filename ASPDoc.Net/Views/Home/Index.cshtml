@@ -1,0 +1,104 @@
+﻿@using System.Collections.ObjectModel
+@using ASPDoc.Net.Controllers
+@model ASPDoc.Net.DocumentManager.Models.FileModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="generator" content="ASPDoc.net" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title</title>
+    <link href="~/bundles/stylesheets/aspdoc.min.css" rel="stylesheet" />
+</head>
+<body>
+
+    <!--Navigation-->
+    @{ Html.RenderPartial("_Navigation"); }
+
+    @if (ViewBag.IsAuthenticated)
+    {
+        <div class="ui-layout-west">
+            <textarea class="markdown" data-editor="markdown">@Html.Raw(@Model.Markdown)</textarea>
+        </div>
+        <div class="ui-layout-center">
+
+            <div id="Content" class="ui one column padded grid">
+                <div class="column">
+
+                    <div class="ui blue horizontal message">
+                        <i class="info icon"></i>
+                        Editing @Model.DocumentPath
+                    </div>
+
+                    @{Collection<string> versions = HomeController.GetFileVersions(@Model);
+
+                    if (versions.Count > 1)
+                    {
+                        <div class="ui selection dropdown">
+                            <input name="VersionHidden" type="hidden" value='@Request.QueryString["version"]'>
+                            <div class="default text">View Revisions</div>
+                            <i class="dropdown icon"></i>
+                            <div class="ui small menu">
+
+                                <a class="item" href="@if (Request.Url != null)
+                                {@Request.Url.GetLeftPart(UriPartial.Path)}">View Revisions</a>
+
+                                @foreach (string version in versions)
+                                {
+                                    <a class="item" href="?version=@version" data-value="@version">@version</a>
+                                }
+                            </div>
+                        </div>
+                    }}
+
+                    <div id="Preview">
+                        @Html.Raw(@Model.Document)
+                    </div>
+
+                    @if (ViewBag.DisplayDiscusDuringEdit == "Yes")
+                    {
+                        Html.RenderPartial("_Disqus");
+                    }
+                </div>
+
+                @using (Html.BeginForm())
+                {
+                    @Html.HiddenFor(x => x.DocumentPath)
+                    @Html.HiddenFor(x => x.Document)
+                    @Html.HiddenFor(x => x.Markdown)
+
+                    <button class="ui green icon button" id="SaveButton" style="display: none;" onclick=" return SaveButtonClicked(); ">
+                        <i class="save icon"></i>
+                        Save This Story
+                    </button>
+                }
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="ui-layout-center">
+            <div id="PageGrid" class="ui one column padded page grid">
+                <div class="column">
+                    @Html.Raw(@Model.Document)
+
+                    @{ Html.RenderPartial("_Disqus"); }
+                </div>
+            </div>
+        </div>
+    }
+
+    <script type="text/javascript">
+        var virtualDirectory = '@Request.ApplicationPath';
+        var mediaDirectory = '@ViewBag.MediaDirectory';
+    </script>
+    <script src="~/bundles/scripts/aspdoc.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.dropdown').dropdown();
+            $('.checkbox').checkbox();
+        });
+    </script>
+</body>
+</html>

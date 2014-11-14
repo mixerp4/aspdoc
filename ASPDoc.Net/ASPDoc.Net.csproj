@@ -1,0 +1,613 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A0D65795-7F72-494C-A110-4B24428CB6CC}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ASPDoc.Net</RootNamespace>
+    <AssemblyName>ASPDoc.Net</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MixERP.Net.Common">
+      <HintPath>..\Dependencies\MixERP.Net.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.30506.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.30506.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.30506.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.30506.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.30506.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\FileUpload.ashx.cs">
+      <DependentUpon>FileUpload.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\ImageHandler.ashx.cs">
+      <DependentUpon>ImageHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\JsonHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\MediaService.asmx.cs">
+      <DependentUpon>MediaService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="bundles\scripts\aspdoc.js">
+      <DependentUpon>aspdoc.js.bundle</DependentUpon>
+    </Content>
+    <Content Include="bundles\scripts\aspdoc.min.js">
+      <DependentUpon>aspdoc.js</DependentUpon>
+    </Content>
+    <Content Include="bundles\stylesheets\aspdoc.css">
+      <DependentUpon>aspdoc.css.bundle</DependentUpon>
+    </Content>
+    <Content Include="bundles\stylesheets\aspdoc.min.css">
+      <DependentUpon>aspdoc.css</DependentUpon>
+    </Content>
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\ace-editor\ace.js" />
+    <Content Include="Scripts\ace-editor\ext-beautify.js" />
+    <Content Include="Scripts\ace-editor\ext-chromevox.js" />
+    <Content Include="Scripts\ace-editor\ext-elastic_tabstops_lite.js" />
+    <Content Include="Scripts\ace-editor\ext-emmet.js" />
+    <Content Include="Scripts\ace-editor\ext-error_marker.js" />
+    <Content Include="Scripts\ace-editor\ext-keybinding_menu.js" />
+    <Content Include="Scripts\ace-editor\ext-language_tools.js" />
+    <Content Include="Scripts\ace-editor\ext-linking.js" />
+    <Content Include="Scripts\ace-editor\ext-modelist.js" />
+    <Content Include="Scripts\ace-editor\ext-old_ie.js" />
+    <Content Include="Scripts\ace-editor\ext-searchbox.js" />
+    <Content Include="Scripts\ace-editor\ext-settings_menu.js" />
+    <Content Include="Scripts\ace-editor\ext-spellcheck.js" />
+    <Content Include="Scripts\ace-editor\ext-split.js" />
+    <Content Include="Scripts\ace-editor\ext-static_highlight.js" />
+    <Content Include="Scripts\ace-editor\ext-statusbar.js" />
+    <Content Include="Scripts\ace-editor\ext-textarea.js" />
+    <Content Include="Scripts\ace-editor\ext-themelist.js" />
+    <Content Include="Scripts\ace-editor\ext-whitespace.js" />
+    <Content Include="Scripts\ace-editor\keybinding-emacs.js" />
+    <Content Include="Scripts\ace-editor\keybinding-vim.js" />
+    <Content Include="Scripts\ace-editor\mode-abap.js" />
+    <Content Include="Scripts\ace-editor\mode-actionscript.js" />
+    <Content Include="Scripts\ace-editor\mode-ada.js" />
+    <Content Include="Scripts\ace-editor\mode-apache_conf.js" />
+    <Content Include="Scripts\ace-editor\mode-applescript.js" />
+    <Content Include="Scripts\ace-editor\mode-asciidoc.js" />
+    <Content Include="Scripts\ace-editor\mode-assembly_x86.js" />
+    <Content Include="Scripts\ace-editor\mode-autohotkey.js" />
+    <Content Include="Scripts\ace-editor\mode-batchfile.js" />
+    <Content Include="Scripts\ace-editor\mode-c9search.js" />
+    <Content Include="Scripts\ace-editor\mode-cirru.js" />
+    <Content Include="Scripts\ace-editor\mode-clojure.js" />
+    <Content Include="Scripts\ace-editor\mode-cobol.js" />
+    <Content Include="Scripts\ace-editor\mode-coffee.js" />
+    <Content Include="Scripts\ace-editor\mode-coldfusion.js" />
+    <Content Include="Scripts\ace-editor\mode-csharp.js" />
+    <Content Include="Scripts\ace-editor\mode-css.js" />
+    <Content Include="Scripts\ace-editor\mode-curly.js" />
+    <Content Include="Scripts\ace-editor\mode-c_cpp.js" />
+    <Content Include="Scripts\ace-editor\mode-d.js" />
+    <Content Include="Scripts\ace-editor\mode-dart.js" />
+    <Content Include="Scripts\ace-editor\mode-diff.js" />
+    <Content Include="Scripts\ace-editor\mode-django.js" />
+    <Content Include="Scripts\ace-editor\mode-dockerfile.js" />
+    <Content Include="Scripts\ace-editor\mode-dot.js" />
+    <Content Include="Scripts\ace-editor\mode-eiffel.js" />
+    <Content Include="Scripts\ace-editor\mode-ejs.js" />
+    <Content Include="Scripts\ace-editor\mode-erlang.js" />
+    <Content Include="Scripts\ace-editor\mode-forth.js" />
+    <Content Include="Scripts\ace-editor\mode-ftl.js" />
+    <Content Include="Scripts\ace-editor\mode-gcode.js" />
+    <Content Include="Scripts\ace-editor\mode-gherkin.js" />
+    <Content Include="Scripts\ace-editor\mode-gitignore.js" />
+    <Content Include="Scripts\ace-editor\mode-glsl.js" />
+    <Content Include="Scripts\ace-editor\mode-golang.js" />
+    <Content Include="Scripts\ace-editor\mode-groovy.js" />
+    <Content Include="Scripts\ace-editor\mode-haml.js" />
+    <Content Include="Scripts\ace-editor\mode-handlebars.js" />
+    <Content Include="Scripts\ace-editor\mode-haskell.js" />
+    <Content Include="Scripts\ace-editor\mode-haxe.js" />
+    <Content Include="Scripts\ace-editor\mode-html.js" />
+    <Content Include="Scripts\ace-editor\mode-html_ruby.js" />
+    <Content Include="Scripts\ace-editor\mode-ini.js" />
+    <Content Include="Scripts\ace-editor\mode-io.js" />
+    <Content Include="Scripts\ace-editor\mode-jack.js" />
+    <Content Include="Scripts\ace-editor\mode-jade.js" />
+    <Content Include="Scripts\ace-editor\mode-java.js" />
+    <Content Include="Scripts\ace-editor\mode-javascript.js" />
+    <Content Include="Scripts\ace-editor\mode-json.js" />
+    <Content Include="Scripts\ace-editor\mode-jsoniq.js" />
+    <Content Include="Scripts\ace-editor\mode-jsp.js" />
+    <Content Include="Scripts\ace-editor\mode-jsx.js" />
+    <Content Include="Scripts\ace-editor\mode-julia.js" />
+    <Content Include="Scripts\ace-editor\mode-latex.js" />
+    <Content Include="Scripts\ace-editor\mode-less.js" />
+    <Content Include="Scripts\ace-editor\mode-liquid.js" />
+    <Content Include="Scripts\ace-editor\mode-lisp.js" />
+    <Content Include="Scripts\ace-editor\mode-livescript.js" />
+    <Content Include="Scripts\ace-editor\mode-logiql.js" />
+    <Content Include="Scripts\ace-editor\mode-lsl.js" />
+    <Content Include="Scripts\ace-editor\mode-lua.js" />
+    <Content Include="Scripts\ace-editor\mode-luapage.js" />
+    <Content Include="Scripts\ace-editor\mode-lucene.js" />
+    <Content Include="Scripts\ace-editor\mode-makefile.js" />
+    <Content Include="Scripts\ace-editor\mode-markdown.js" />
+    <Content Include="Scripts\ace-editor\mode-matlab.js" />
+    <Content Include="Scripts\ace-editor\mode-mel.js" />
+    <Content Include="Scripts\ace-editor\mode-mushcode.js" />
+    <Content Include="Scripts\ace-editor\mode-mysql.js" />
+    <Content Include="Scripts\ace-editor\mode-nix.js" />
+    <Content Include="Scripts\ace-editor\mode-objectivec.js" />
+    <Content Include="Scripts\ace-editor\mode-ocaml.js" />
+    <Content Include="Scripts\ace-editor\mode-pascal.js" />
+    <Content Include="Scripts\ace-editor\mode-perl.js" />
+    <Content Include="Scripts\ace-editor\mode-pgsql.js" />
+    <Content Include="Scripts\ace-editor\mode-php.js" />
+    <Content Include="Scripts\ace-editor\mode-plain_text.js" />
+    <Content Include="Scripts\ace-editor\mode-powershell.js" />
+    <Content Include="Scripts\ace-editor\mode-praat.js" />
+    <Content Include="Scripts\ace-editor\mode-prolog.js" />
+    <Content Include="Scripts\ace-editor\mode-properties.js" />
+    <Content Include="Scripts\ace-editor\mode-protobuf.js" />
+    <Content Include="Scripts\ace-editor\mode-python.js" />
+    <Content Include="Scripts\ace-editor\mode-r.js" />
+    <Content Include="Scripts\ace-editor\mode-rdoc.js" />
+    <Content Include="Scripts\ace-editor\mode-rhtml.js" />
+    <Content Include="Scripts\ace-editor\mode-ruby.js" />
+    <Content Include="Scripts\ace-editor\mode-rust.js" />
+    <Content Include="Scripts\ace-editor\mode-sass.js" />
+    <Content Include="Scripts\ace-editor\mode-scad.js" />
+    <Content Include="Scripts\ace-editor\mode-scala.js" />
+    <Content Include="Scripts\ace-editor\mode-scheme.js" />
+    <Content Include="Scripts\ace-editor\mode-scss.js" />
+    <Content Include="Scripts\ace-editor\mode-sh.js" />
+    <Content Include="Scripts\ace-editor\mode-sjs.js" />
+    <Content Include="Scripts\ace-editor\mode-smarty.js" />
+    <Content Include="Scripts\ace-editor\mode-snippets.js" />
+    <Content Include="Scripts\ace-editor\mode-soy_template.js" />
+    <Content Include="Scripts\ace-editor\mode-space.js" />
+    <Content Include="Scripts\ace-editor\mode-sql.js" />
+    <Content Include="Scripts\ace-editor\mode-stylus.js" />
+    <Content Include="Scripts\ace-editor\mode-svg.js" />
+    <Content Include="Scripts\ace-editor\mode-tcl.js" />
+    <Content Include="Scripts\ace-editor\mode-tex.js" />
+    <Content Include="Scripts\ace-editor\mode-text.js" />
+    <Content Include="Scripts\ace-editor\mode-textile.js" />
+    <Content Include="Scripts\ace-editor\mode-toml.js" />
+    <Content Include="Scripts\ace-editor\mode-twig.js" />
+    <Content Include="Scripts\ace-editor\mode-typescript.js" />
+    <Content Include="Scripts\ace-editor\mode-vala.js" />
+    <Content Include="Scripts\ace-editor\mode-vbscript.js" />
+    <Content Include="Scripts\ace-editor\mode-velocity.js" />
+    <Content Include="Scripts\ace-editor\mode-verilog.js" />
+    <Content Include="Scripts\ace-editor\mode-vhdl.js" />
+    <Content Include="Scripts\ace-editor\mode-xml.js" />
+    <Content Include="Scripts\ace-editor\mode-xquery.js" />
+    <Content Include="Scripts\ace-editor\mode-yaml.js" />
+    <Content Include="Scripts\ace-editor\snippets\abap.js" />
+    <Content Include="Scripts\ace-editor\snippets\actionscript.js" />
+    <Content Include="Scripts\ace-editor\snippets\ada.js" />
+    <Content Include="Scripts\ace-editor\snippets\apache_conf.js" />
+    <Content Include="Scripts\ace-editor\snippets\applescript.js" />
+    <Content Include="Scripts\ace-editor\snippets\asciidoc.js" />
+    <Content Include="Scripts\ace-editor\snippets\assembly_x86.js" />
+    <Content Include="Scripts\ace-editor\snippets\autohotkey.js" />
+    <Content Include="Scripts\ace-editor\snippets\batchfile.js" />
+    <Content Include="Scripts\ace-editor\snippets\c9search.js" />
+    <Content Include="Scripts\ace-editor\snippets\cirru.js" />
+    <Content Include="Scripts\ace-editor\snippets\clojure.js" />
+    <Content Include="Scripts\ace-editor\snippets\cobol.js" />
+    <Content Include="Scripts\ace-editor\snippets\coffee.js" />
+    <Content Include="Scripts\ace-editor\snippets\coldfusion.js" />
+    <Content Include="Scripts\ace-editor\snippets\csharp.js" />
+    <Content Include="Scripts\ace-editor\snippets\css.js" />
+    <Content Include="Scripts\ace-editor\snippets\curly.js" />
+    <Content Include="Scripts\ace-editor\snippets\c_cpp.js" />
+    <Content Include="Scripts\ace-editor\snippets\d.js" />
+    <Content Include="Scripts\ace-editor\snippets\dart.js" />
+    <Content Include="Scripts\ace-editor\snippets\diff.js" />
+    <Content Include="Scripts\ace-editor\snippets\django.js" />
+    <Content Include="Scripts\ace-editor\snippets\dockerfile.js" />
+    <Content Include="Scripts\ace-editor\snippets\dot.js" />
+    <Content Include="Scripts\ace-editor\snippets\eiffel.js" />
+    <Content Include="Scripts\ace-editor\snippets\ejs.js" />
+    <Content Include="Scripts\ace-editor\snippets\erlang.js" />
+    <Content Include="Scripts\ace-editor\snippets\forth.js" />
+    <Content Include="Scripts\ace-editor\snippets\ftl.js" />
+    <Content Include="Scripts\ace-editor\snippets\gcode.js" />
+    <Content Include="Scripts\ace-editor\snippets\gherkin.js" />
+    <Content Include="Scripts\ace-editor\snippets\gitignore.js" />
+    <Content Include="Scripts\ace-editor\snippets\glsl.js" />
+    <Content Include="Scripts\ace-editor\snippets\golang.js" />
+    <Content Include="Scripts\ace-editor\snippets\groovy.js" />
+    <Content Include="Scripts\ace-editor\snippets\haml.js" />
+    <Content Include="Scripts\ace-editor\snippets\handlebars.js" />
+    <Content Include="Scripts\ace-editor\snippets\haskell.js" />
+    <Content Include="Scripts\ace-editor\snippets\haxe.js" />
+    <Content Include="Scripts\ace-editor\snippets\html.js" />
+    <Content Include="Scripts\ace-editor\snippets\html_ruby.js" />
+    <Content Include="Scripts\ace-editor\snippets\ini.js" />
+    <Content Include="Scripts\ace-editor\snippets\io.js" />
+    <Content Include="Scripts\ace-editor\snippets\jack.js" />
+    <Content Include="Scripts\ace-editor\snippets\jade.js" />
+    <Content Include="Scripts\ace-editor\snippets\java.js" />
+    <Content Include="Scripts\ace-editor\snippets\javascript.js" />
+    <Content Include="Scripts\ace-editor\snippets\json.js" />
+    <Content Include="Scripts\ace-editor\snippets\jsoniq.js" />
+    <Content Include="Scripts\ace-editor\snippets\jsp.js" />
+    <Content Include="Scripts\ace-editor\snippets\jsx.js" />
+    <Content Include="Scripts\ace-editor\snippets\julia.js" />
+    <Content Include="Scripts\ace-editor\snippets\latex.js" />
+    <Content Include="Scripts\ace-editor\snippets\less.js" />
+    <Content Include="Scripts\ace-editor\snippets\liquid.js" />
+    <Content Include="Scripts\ace-editor\snippets\lisp.js" />
+    <Content Include="Scripts\ace-editor\snippets\livescript.js" />
+    <Content Include="Scripts\ace-editor\snippets\logiql.js" />
+    <Content Include="Scripts\ace-editor\snippets\lsl.js" />
+    <Content Include="Scripts\ace-editor\snippets\lua.js" />
+    <Content Include="Scripts\ace-editor\snippets\luapage.js" />
+    <Content Include="Scripts\ace-editor\snippets\lucene.js" />
+    <Content Include="Scripts\ace-editor\snippets\makefile.js" />
+    <Content Include="Scripts\ace-editor\snippets\markdown.js" />
+    <Content Include="Scripts\ace-editor\snippets\matlab.js" />
+    <Content Include="Scripts\ace-editor\snippets\mel.js" />
+    <Content Include="Scripts\ace-editor\snippets\mushcode.js" />
+    <Content Include="Scripts\ace-editor\snippets\mysql.js" />
+    <Content Include="Scripts\ace-editor\snippets\nix.js" />
+    <Content Include="Scripts\ace-editor\snippets\objectivec.js" />
+    <Content Include="Scripts\ace-editor\snippets\ocaml.js" />
+    <Content Include="Scripts\ace-editor\snippets\pascal.js" />
+    <Content Include="Scripts\ace-editor\snippets\perl.js" />
+    <Content Include="Scripts\ace-editor\snippets\pgsql.js" />
+    <Content Include="Scripts\ace-editor\snippets\php.js" />
+    <Content Include="Scripts\ace-editor\snippets\plain_text.js" />
+    <Content Include="Scripts\ace-editor\snippets\powershell.js" />
+    <Content Include="Scripts\ace-editor\snippets\praat.js" />
+    <Content Include="Scripts\ace-editor\snippets\prolog.js" />
+    <Content Include="Scripts\ace-editor\snippets\properties.js" />
+    <Content Include="Scripts\ace-editor\snippets\protobuf.js" />
+    <Content Include="Scripts\ace-editor\snippets\python.js" />
+    <Content Include="Scripts\ace-editor\snippets\r.js" />
+    <Content Include="Scripts\ace-editor\snippets\rdoc.js" />
+    <Content Include="Scripts\ace-editor\snippets\rhtml.js" />
+    <Content Include="Scripts\ace-editor\snippets\ruby.js" />
+    <Content Include="Scripts\ace-editor\snippets\rust.js" />
+    <Content Include="Scripts\ace-editor\snippets\sass.js" />
+    <Content Include="Scripts\ace-editor\snippets\scad.js" />
+    <Content Include="Scripts\ace-editor\snippets\scala.js" />
+    <Content Include="Scripts\ace-editor\snippets\scheme.js" />
+    <Content Include="Scripts\ace-editor\snippets\scss.js" />
+    <Content Include="Scripts\ace-editor\snippets\sh.js" />
+    <Content Include="Scripts\ace-editor\snippets\sjs.js" />
+    <Content Include="Scripts\ace-editor\snippets\smarty.js" />
+    <Content Include="Scripts\ace-editor\snippets\snippets.js" />
+    <Content Include="Scripts\ace-editor\snippets\soy_template.js" />
+    <Content Include="Scripts\ace-editor\snippets\space.js" />
+    <Content Include="Scripts\ace-editor\snippets\sql.js" />
+    <Content Include="Scripts\ace-editor\snippets\stylus.js" />
+    <Content Include="Scripts\ace-editor\snippets\svg.js" />
+    <Content Include="Scripts\ace-editor\snippets\tcl.js" />
+    <Content Include="Scripts\ace-editor\snippets\tex.js" />
+    <Content Include="Scripts\ace-editor\snippets\text.js" />
+    <Content Include="Scripts\ace-editor\snippets\textile.js" />
+    <Content Include="Scripts\ace-editor\snippets\toml.js" />
+    <Content Include="Scripts\ace-editor\snippets\twig.js" />
+    <Content Include="Scripts\ace-editor\snippets\typescript.js" />
+    <Content Include="Scripts\ace-editor\snippets\vala.js" />
+    <Content Include="Scripts\ace-editor\snippets\vbscript.js" />
+    <Content Include="Scripts\ace-editor\snippets\velocity.js" />
+    <Content Include="Scripts\ace-editor\snippets\verilog.js" />
+    <Content Include="Scripts\ace-editor\snippets\vhdl.js" />
+    <Content Include="Scripts\ace-editor\snippets\xml.js" />
+    <Content Include="Scripts\ace-editor\snippets\xquery.js" />
+    <Content Include="Scripts\ace-editor\snippets\yaml.js" />
+    <Content Include="Scripts\ace-editor\theme-ambiance.js" />
+    <Content Include="Scripts\ace-editor\theme-chaos.js" />
+    <Content Include="Scripts\ace-editor\theme-chrome.js" />
+    <Content Include="Scripts\ace-editor\theme-clouds.js" />
+    <Content Include="Scripts\ace-editor\theme-clouds_midnight.js" />
+    <Content Include="Scripts\ace-editor\theme-cobalt.js" />
+    <Content Include="Scripts\ace-editor\theme-crimson_editor.js" />
+    <Content Include="Scripts\ace-editor\theme-dawn.js" />
+    <Content Include="Scripts\ace-editor\theme-dreamweaver.js" />
+    <Content Include="Scripts\ace-editor\theme-eclipse.js" />
+    <Content Include="Scripts\ace-editor\theme-github.js" />
+    <Content Include="Scripts\ace-editor\theme-idle_fingers.js" />
+    <Content Include="Scripts\ace-editor\theme-katzenmilch.js" />
+    <Content Include="Scripts\ace-editor\theme-kr.js" />
+    <Content Include="Scripts\ace-editor\theme-kr_theme.js" />
+    <Content Include="Scripts\ace-editor\theme-kuroir.js" />
+    <Content Include="Scripts\ace-editor\theme-merbivore.js" />
+    <Content Include="Scripts\ace-editor\theme-merbivore_soft.js" />
+    <Content Include="Scripts\ace-editor\theme-monokai.js" />
+    <Content Include="Scripts\ace-editor\theme-mono_industrial.js" />
+    <Content Include="Scripts\ace-editor\theme-pastel_on_dark.js" />
+    <Content Include="Scripts\ace-editor\theme-solarized_dark.js" />
+    <Content Include="Scripts\ace-editor\theme-solarized_light.js" />
+    <Content Include="Scripts\ace-editor\theme-terminal.js" />
+    <Content Include="Scripts\ace-editor\theme-textmate.js" />
+    <Content Include="Scripts\ace-editor\theme-tomorrow.js" />
+    <Content Include="Scripts\ace-editor\theme-tomorrow_night.js" />
+    <Content Include="Scripts\ace-editor\theme-tomorrow_night_blue.js" />
+    <Content Include="Scripts\ace-editor\theme-tomorrow_night_bright.js" />
+    <Content Include="Scripts\ace-editor\theme-tomorrow_night_eighties.js" />
+    <Content Include="Scripts\ace-editor\theme-twilight.js" />
+    <Content Include="Scripts\ace-editor\theme-vibrant_ink.js" />
+    <Content Include="Scripts\ace-editor\theme-xcode.js" />
+    <Content Include="Scripts\ace-editor\worker-coffee.js" />
+    <Content Include="Scripts\ace-editor\worker-css.js" />
+    <Content Include="Scripts\ace-editor\worker-html.js" />
+    <Content Include="Scripts\ace-editor\worker-javascript.js" />
+    <Content Include="Scripts\ace-editor\worker-json.js" />
+    <Content Include="Scripts\ace-editor\worker-lua.js" />
+    <Content Include="Scripts\ace-editor\worker-php.js" />
+    <Content Include="Scripts\ace-editor\worker-xquery.js" />
+    <Content Include="Scripts\ajax-file-upload.js" />
+    <Content Include="Scripts\aspdoc\media-manager\breadcrumb.js" />
+    <Content Include="Scripts\aspdoc\media-manager\utilities.js" />
+    <Content Include="Scripts\aspdoc\media-manager\upload-media.js" />
+    <Content Include="Scripts\aspdoc\media-manager\view-media.js" />
+    <Content Include="Scripts\aspdoc\media-manager\delete-media.js" />
+    <Content Include="Scripts\aspdoc\media-manager\insert-media.js" />
+    <Content Include="Scripts\aspdoc\media-manager\create-directory.js" />
+    <Content Include="Scripts\aspdoc\media-manager\display-media.js" />
+    <Content Include="Scripts\aspdoc\media-manager\declaration.js" />
+    <Content Include="Scripts\jlayout\jlayout.border.js" />
+    <Content Include="Scripts\jlayout\jlayout.flexgrid.js" />
+    <Content Include="Scripts\jlayout\jlayout.flow.js" />
+    <Content Include="Scripts\jlayout\jlayout.grid.js" />
+    <Content Include="Scripts\jlayout\jquery.jlayout.js" />
+    <Content Include="Scripts\jlayout\jquery.sizes.js" />
+    <Content Include="Scripts\jquery\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery\jquery-ui.min.js" />
+    <Content Include="Scripts\jquery\jquery.layout-latest.js" />
+    <Content Include="Scripts\marked\lib\marked.js" />
+    <Content Include="Scripts\marked\marked.min.js" />
+    <Content Include="Scripts\aspdoc\ajax.js" />
+    <Content Include="Scripts\aspdoc\disqus.js" />
+    <Content Include="Scripts\aspdoc\index.js" />
+    <Content Include="Scripts\aspdoc\sign-out.js" />
+    <Content Include="Scripts\aspdoc\sign-in.js" />
+    <Content Include="Scripts\aspdoc\utilities.js" />
+    <Content Include="Scripts\aspdoc\declaration.js" />
+    <Content Include="Scripts\aspdoc\editor.js" />
+    <Content Include="Scripts\aspdoc\layout.js" />
+    <Content Include="Scripts\prism\prism.css" />
+    <Content Include="Scripts\prism\prism.js" />
+    <Content Include="Scripts\semantic\css\semantic.css" />
+    <Content Include="Scripts\semantic\css\semantic.min.css" />
+    <Content Include="Scripts\semantic\fonts\basic.icons.svg" />
+    <Content Include="Scripts\semantic\fonts\icons.svg" />
+    <Content Include="Scripts\semantic\images\loader-large-inverted.gif" />
+    <Content Include="Scripts\semantic\images\loader-large.gif" />
+    <Content Include="Scripts\semantic\images\loader-medium-inverted.gif" />
+    <Content Include="Scripts\semantic\images\loader-medium.gif" />
+    <Content Include="Scripts\semantic\images\loader-mini-inverted.gif" />
+    <Content Include="Scripts\semantic\images\loader-mini.gif" />
+    <Content Include="Scripts\semantic\images\loader-small-inverted.gif" />
+    <Content Include="Scripts\semantic\images\loader-small.gif" />
+    <Content Include="Scripts\semantic\javascript\semantic.js" />
+    <Content Include="Scripts\semantic\javascript\semantic.min.js" />
+    <Content Include="Services\MediaService.asmx" />
+    <Content Include="Site\ASPDocConfiguration.xml" />
+    <Content Include="Stylesheets\aspdoc.css">
+      <DependentUpon>aspdoc.scss</DependentUpon>
+    </Content>
+    <Content Include="Stylesheets\aspdoc.min.css">
+      <DependentUpon>aspdoc.css</DependentUpon>
+    </Content>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Site\Documents\" />
+    <Folder Include="Site\Media\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\semantic\fonts\basic.icons.eot" />
+    <Content Include="Scripts\semantic\fonts\basic.icons.ttf" />
+    <Content Include="Scripts\semantic\fonts\basic.icons.woff" />
+    <Content Include="Scripts\semantic\fonts\icons.eot" />
+    <Content Include="Scripts\semantic\fonts\icons.otf" />
+    <Content Include="Scripts\semantic\fonts\icons.ttf" />
+    <Content Include="Scripts\semantic\fonts\icons.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Stylesheets\aspdoc.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\marked\LICENSE" />
+    <Content Include="Scripts\marked\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bundles\scripts\aspdoc.js.bundle" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_SignIn.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_Disqus.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bundles\stylesheets\aspdoc.css.bundle" />
+    <Content Include="bundles\scripts\aspdoc.min.js.map">
+      <DependentUpon>aspdoc.min.js</DependentUpon>
+    </Content>
+    <Content Include="Handlers\ImageHandler.ashx" />
+    <Content Include="Handlers\FileUpload.ashx" />
+    <Content Include="ASPDoc.Net.licenseheader" />
+    <None Include="Properties\PublishProfiles\FileSystem.pubxml" />
+    <Content Include="Views\Shared\_Navigation.cshtml" />
+    <Content Include="Views\Shared\_Configuration.cshtml" />
+    <Content Include="Stylesheets\aspdoc.css.map">
+      <DependentUpon>aspdoc.css</DependentUpon>
+    </Content>
+    <Content Include="Views\Shared\_MediaManager.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ASPDoc.Net.Common\ASPDoc.Net.Common.csproj">
+      <Project>{495a303d-0dcc-4031-8989-f28adfa40eb8}</Project>
+      <Name>ASPDoc.Net.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ASPDoc.Net.Configuration\ASPDoc.Net.Configuration.csproj">
+      <Project>{b44d5562-c505-4b5a-841c-6c32668ec776}</Project>
+      <Name>ASPDoc.Net.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ASPDoc.Net.DocumentManager\ASPDoc.Net.DocumentManager.csproj">
+      <Project>{082aa453-2980-47a7-80d0-52c3157c22ce}</Project>
+      <Name>ASPDoc.Net.DocumentManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ASPDoc.Net.Membership\ASPDoc.Net.Membership.csproj">
+      <Project>{612bed47-df03-450d-aaf0-83cecb2fc417}</Project>
+      <Name>ASPDoc.Net.Membership</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1205</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/ASPDoc.Net</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>http://foundation</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

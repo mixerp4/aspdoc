@@ -1,0 +1,37 @@
+#Welcome to ASPDoc.Net Documentation
+<div class="ui horizontal icon divider">
+  <i class="circular cut icon"></i>
+</div>    
+
+ASPDoc.Net is ** *a tiny high-performance* ** NoSQL documentation management solution released under [GNU/GPL v3 License](documentation/gpl).
+The key features of ASPDoc.net are:
+
+* [Has Live Markdown Editor](documentation/markdown-editor)
+* [Supports Arbitrary Urls](documentation/arbitrary-urls) 
+* [Uses Flat Files Instead of Database](documentation/flat-file)
+* [Favors Github Markdown Syntax](documentation/github-markdown)
+* [Has an Inbuilt Media Manager](documentation/media-manager)
+* [Supports Syntax Highlighting](documentation/syntax-highlighting) 
+* [Has Switchable Disqus Plugin](documentation/disqus)
+* [Has Tiny Configuration File](documentation/configuration)
+
+
+##Special Thanks to the Rockstars
+
+We would like to thank the following great quality open source projects and companies: 
+
+* [ASP.net](http://asp.net)
+* [jQuery](http://jquery.com)
+* [Semantic UI](http://semantic-ui.com)
+* [MixERP](http://mixerp.org)
+* [Ace Editor](http://ace.c9.io)
+* [Prism](http://prismjs.com)
+* [Chjj Marked](https://github.com/chjj/marked)
+* [jQuery UI Layout Plugin](http://layout.jquery-dev.com)
+* [Sean Clark for Ajax File Upload](http://square-bracket.com)
+* [Pixabay for Free Images](http://pixabay.com)
+
+<div class="ui  divider"></div>    
+
+
+![Site/Media/Documentation/aspdoc-logo.png](Site/Media/aspdoc-logo.png)

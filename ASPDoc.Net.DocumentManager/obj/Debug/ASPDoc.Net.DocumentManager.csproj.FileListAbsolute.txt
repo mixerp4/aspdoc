@@ -1,0 +1,12 @@
+C:\Users\nirvan\Desktop\mixerp\ASPDoc\ASPDoc.Net.DocumentManager\bin\Debug\ASPDoc.Net.DocumentManager.dll
+C:\Users\nirvan\Desktop\mixerp\ASPDoc\ASPDoc.Net.DocumentManager\bin\Debug\ASPDoc.Net.DocumentManager.pdb
+C:\Users\nirvan\Desktop\mixerp\ASPDoc\ASPDoc.Net.DocumentManager\obj\Debug\ASPDoc.Net.DocumentManager.dll
+C:\Users\nirvan\Desktop\mixerp\ASPDoc\ASPDoc.Net.DocumentManager\obj\Debug\ASPDoc.Net.DocumentManager.pdb
+C:\Users\nirvan\Desktop\mixerp\ASPDoc\ASPDoc.Net.DocumentManager\obj\Debug\ASPDoc.Net.DocumentManager.csprojResolveAssemblyReference.cache
+C:\Users\nirvan\Desktop\mixerp\ASPDoc\ASPDoc.Net.DocumentManager\bin\Debug\MixERP.Net.Common.dll
+C:\Users\nirvan\Desktop\mixerp\ASPDoc.net Codeplex\aspdoc\ASPDoc.Net.DocumentManager\bin\Debug\ASPDoc.Net.DocumentManager.dll
+C:\Users\nirvan\Desktop\mixerp\ASPDoc.net Codeplex\aspdoc\ASPDoc.Net.DocumentManager\bin\Debug\ASPDoc.Net.DocumentManager.pdb
+C:\Users\nirvan\Desktop\mixerp\ASPDoc.net Codeplex\aspdoc\ASPDoc.Net.DocumentManager\bin\Debug\MixERP.Net.Common.dll
+C:\Users\nirvan\Desktop\mixerp\ASPDoc.net Codeplex\aspdoc\ASPDoc.Net.DocumentManager\obj\Debug\ASPDoc.Net.DocumentManager.csprojResolveAssemblyReference.cache
+C:\Users\nirvan\Desktop\mixerp\ASPDoc.net Codeplex\aspdoc\ASPDoc.Net.DocumentManager\obj\Debug\ASPDoc.Net.DocumentManager.dll
+C:\Users\nirvan\Desktop\mixerp\ASPDoc.net Codeplex\aspdoc\ASPDoc.Net.DocumentManager\obj\Debug\ASPDoc.Net.DocumentManager.pdb

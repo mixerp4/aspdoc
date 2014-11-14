@@ -1,0 +1,128 @@
+﻿@model ASPDoc.Net.Configuration.Models.ConfigurationModel
+
+<div class="ui modal" id="Settings">
+    <i class="close icon"></i>
+    <div class="header">
+        <i class="setting icon"></i>
+        ASPDoc.Net Configuration
+    </div>
+    <div class="content">
+        <form>
+            <div class="ui form blue segment">
+                <div class="field">
+                    <label for="SiteName">Site Name</label>
+                    <input type="text" id="SiteName" value="@Model.SiteName" />
+                </div>
+                <div class="two fields">
+                    <div class="field">
+                        <label for="DefaultPath">Default Path</label>
+                        <input type="text" id="DefaultPath" value="@Model.DefaultPath" />
+                    </div>
+                    <div class="field">
+                        <label for="DefaultDirectory">Default Directory</label>
+                        <input type="text" id="DefaultDirectory" value="@Model.DefaultDirectory" />
+                    </div>
+                </div>
+                <div class="two fields">
+                    <div class="field">
+                        <label for="MediaDirectory">Media Directory</label>
+                        <input type="text" id="MediaDirectory" value="@Model.MediaDirectory" />
+                    </div>
+                    <div class="field">
+                        <label for="AllowedExtensions">Allowed Extensions</label>
+                        <input type="text" id="AllowedExtensions" value="@Model.AllowedExtensions" />
+                    </div>
+                </div>
+                <div class="two fields">
+                    <div class="field">
+                        <label for="DisqusName">Disqus Name</label>
+                        <input type="text" id="DisqusName" value="@Model.DisqusName" />
+                    </div>
+                    <div class="field">
+                        <label>Display Discus During Live Editing</label>
+                        <div class="ui small selection fluid dropdown">
+                            <input name="DisplayDiscusDuringEdit" id="DisplayDiscusDuringEdit" type="hidden" value="@Model.DisplayDiscusDuringEdit">
+                            <div class="default text">@Model.DisplayDiscusDuringEdit</div>
+                            <i class="dropdown icon"></i>
+                            <div class="menu">
+                                <div class="item" data-value="Yes">Yes</div>
+                                <div class="item" data-value="No">No</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="two fields">
+                    <div class="field">
+                        <label>Enable Version Control</label>
+                        <div class="ui small selection fluid dropdown">
+                            <input name="EnableVersionControl" id="EnableVersionControl" type="hidden" value="@Model.EnableVersionControl">
+                            <div class="default text">@Model.EnableVersionControl</div>
+                            <i class="dropdown icon"></i>
+                            <div class="menu">
+                                <div class="item" data-value="Yes">Yes</div>
+                                <div class="item" data-value="No">No</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="ui positive left labeled icon small button" onclick="return SaveConfiguration();">
+                    <i class="save icon"></i>
+                    Save
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="actions">
+        <div class="ui small red button">
+            Cancel
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function SaveConfiguration() {
+
+        var defaultPath = $("#DefaultPath");
+        var defaultDirectory = $("#DefaultDirectory");
+        var mediaDirectory = $("#MediaDirectory");
+        var allowedExtensions = $("#AllowedExtensions");
+        var disqusName = $("#DisqusName");
+        var displayDiscusDuringEdit = $("#DisplayDiscusDuringEdit");
+        var enableVersionControl = $("#EnableVersionControl");
+        var siteName = $("#SiteName");
+
+        var configurationModel = new Object();
+
+        configurationModel.SiteName = siteName.val();
+        configurationModel.DefaultPath = defaultPath.val();
+        configurationModel.DefaultDirectory = defaultDirectory.val();
+        configurationModel.MediaDirectory = mediaDirectory.val();
+        configurationModel.AllowedExtensions = allowedExtensions.val();
+        configurationModel.DisqusName = disqusName.val();
+        configurationModel.DisplayDiscusDuringEdit = displayDiscusDuringEdit.val();
+        configurationModel.EnableVersionControl = enableVersionControl.val();
+
+        var ajaxSaveConfiguration = AjaxSaveConfiguration(configurationModel);
+
+        ajaxSaveConfiguration.success(function () {
+            alert("Thank you");
+            $("#Settings").modal("hide");
+        });
+
+        ajaxSaveConfiguration.fail(function (xhr) {
+            alert(xhr.responseText);
+        });
+
+        return false;
+
+    };
+
+    function AjaxSaveConfiguration(model) {
+        var url = ResolveUrl("~/home/configuration/save");
+        var data = AppendParameter("", "model", model);
+        data = GetData(data);
+
+        return GetAjax(url, data);
+    };
+</script>

@@ -1,0 +1,21 @@
+#Live Editing with Markdown
+
+ASPDoc uses a high performance code editor **Ace Editor** and a built for speed markdown parser **Marked** and a beautiful CSS and Javascript
+framework called **Semantic UI**. The right panel is the live preview window which is updated as you start writing your markdown.
+
+For your assistance, we have an inbuilt [media manager](media-manager) which helps you create directories and upload media files 
+and insert the media directly to the editor.
+
+
+
+![../Site/Media/Documentation/foos-documentation.png](../Site/Media/Documentation/foos-documentation.png)
+
+
+
+##Related Topics
+* [Media Manager](media-manager)
+* [Back to Documentation Home](../index)
+ 
+###Special Thanks To:
+* [Ace Editor](http://ace.c9.io/)
+* [Chjj Marked](https://github.com/chjj/marked)
